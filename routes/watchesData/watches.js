@@ -1,7 +1,7 @@
 var router=require('express').Router();
 var watchesData=require('../../model/watchesModel');
 var portDev= require('../../../config');
-const port=process.env.PORT ||portDev.port;
+const port=process.env.PORT ||configFile.port || 1234;
 
 // router.get('/',function (req,res) {
 //     var data;
