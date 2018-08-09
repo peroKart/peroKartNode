@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const path=require('path');
 var portDev= require('../../../config');
 var verifyToken=require('../auth/verifyToken');
-const port=process.env.PORT ||portDev.port;
+const port=process.env.PORT ||configFile.port || 1234;
 const sellorSchema = require('../../model/sellor')
 ////////////////////////////         REQUIRING THE MODELS          /////////////////////////
 
