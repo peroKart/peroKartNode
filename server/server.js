@@ -8,8 +8,10 @@ var fashionRouter=require('../routes/fashionData/fashion');
 var electronicsRouter=require('../routes/electronicsData/electronics');
 var watchesData=require('../routes/watchesData/watches');
 var booksData=require('../routes/booksData/books');
-var uploadData=require('../routes/dataUpload/dataUpload')
-var mainPageData=require('../routes/mainPageData/mainPageData')
+var uploadData=require('../routes/dataUpload/dataUpload');
+var mainPageData=require('../routes/mainPageData/mainPageData');
+var authentication = require('../routes/auth/authSellor');
+var sellorProfile = require('../routes/sellorProfile/dashboard')
 var cors = require('cors');
 const mongoose = require('mongoose');
 //mongoose.connect('mongodb://perokartDB:pero9pero@ds253891.mlab.com:53891/perokart')
@@ -29,7 +31,9 @@ app.use('/api/electronics',electronicsRouter);
 app.use('/api/fashion',fashionRouter);
 app.use('/api/books',booksData);
 app.use('/api/watches',watchesData);
+app.use('/api/auth',authentication);
 app.use('/api/mainPageData',mainPageData);
+app.use('/api/auth/profile',sellorProfile);
 app.get('/', function (req,res) {
     res.send("hello on main page")
 
