@@ -2,9 +2,8 @@ const router=require('express').Router();
 const multer  = require('multer')
 const bodyParser = require('body-parser');
 const path=require('path');
-var portDev= require('../../../config');
 var verifyToken=require('../auth/verifyToken');
-const port=process.env.PORT ||configFile.port || 1234;
+const port=1234;
 const sellorSchema = require('../../model/sellor')
 ////////////////////////////         REQUIRING THE MODELS          /////////////////////////
 
