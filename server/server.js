@@ -1,7 +1,7 @@
 var express = require ('express');
 var app = express();
 var configFile= require('../../config');
-const port=process.env.PORT ||configFile.port;
+const port=process.env.PORT ||configFile.port || 1234;
 const bodyParser = require('body-parser');
 var router=express.Router();
 var fashionRouter=require('../routes/fashionData/fashion');
