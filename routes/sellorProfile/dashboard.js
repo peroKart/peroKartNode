@@ -2,7 +2,7 @@ const router=require('express').Router();
 const sellorSchema = require('../../model/sellor')
 var portDev= require('../../../config');
 var verifyToken=require('../auth/verifyToken');
-const port=process.env.PORT ||portDev.port;
+const port=process.env.PORT ||configFile.port || 1234;
 
 
 router.post('/dashboard',verifyToken,function (req,res) {
